@@ -1,3 +1,4 @@
+
 //                          CHAPTER 01
 
 // 1. Write a script to greet your website visitor using JS alert box.
@@ -12,6 +13,11 @@ alert("Welcome to JS land...\nHappy Coding");
 // 4. Write a script to display following messages in sequence:
 alert("Welcome to Js Land...");
 
+// 5. Generate the following message through browser’s developer console:
+alert("Hello... I can run JSthrough my web browser's console");
+
+// 6. Make use of alerts in your new/existing HTML & CSS project.
+alert("hello");
 
 //                          CHAPTER 02
 
@@ -60,8 +66,8 @@ console.log(a);
 //                              CHAPTER 03
 
 // 1. Declare a variable called age & assign to it your age. Show your age in an alert box.
-var age = 20;
-alert("Iam " + age + " years old");
+var age = +prompt("Enter your age");
+alert("I am " + age + " years old");
 
 // 2. Declare & initialize a variable to keep track of how many times a visitor has visited a web page. Show his/her number of visits on your web page. For example: “You have visited this site N times”.
 var visited = 1;
@@ -120,34 +126,34 @@ var first, second, third;
 
 // 1. Write a program that take two numbers & add them in a new variable. Show the result in your browser.
      // For Addition
-     var num1 = prompt("Enter first number for Addition");
-     var num2 = prompt("Enter second number for Addition");
+     var num1 = +prompt("Enter first number for Addition");
+     var num2 = +prompt("Enter second number for Addition");
      var result = num1 + num2;
      alert("Sum of " + num1 + " and " + num2 + " is " + result);
      console.log("Sum of " + num1 + " and " + num2 + " is " + result);
 
 // 2. Repeat task1 for subtraction, multiplication, division & modulus.
      // For Subtraction
-     var num1 = prompt("Enter first number for Subtraction");
-     var num2 = prompt("Enter second number for Subtraction");
+     var num1 = +prompt("Enter first number for Subtraction");
+     var num2 = +prompt("Enter second number for Subtraction");
      var result = num1 - num2;
      alert("Subtraction of " + num1 + " and " + num2 + " is " + result);
      console.log("Subtraction of " + num1 + " and " + num2 + " is " + result);
      // For Multiplication
-     var num1 = prompt("Enter first number for Multiplication");
-     var num2 = prompt("Enter second number for Multiplication");
+     var num1 = +prompt("Enter first number for Multiplication");
+     var num2 = +prompt("Enter second number for Multiplication");
      var result = num1 * num2;
      alert("Multiplication of " + num1 + " and " + num2 + " is " + result);
      console.log("Multiplication of " + num1 + " and " + num2 + " is " + result);
      // For Division
-     var num1 = prompt("Enter first number for Division");
-     var num2 = prompt("Enter second number for Division");
+     var num1 = +prompt("Enter first number for Division");
+     var num2 = +prompt("Enter second number for Division");
      var result = num1 / num2;
      alert("Division of " + num1 + " and " + num2 + " is " + result);
      console.log("Division of " + num1 + " and " + num2 + " is " + result);
      // For Modulus
-     var num1 = prompt("Enter first number for Modulus");
-     var num2 = prompt("Enter second number for Modulus");
+     var num1 = +prompt("Enter first number for Modulus");
+     var num2 = +prompt("Enter second number for Modulus");
      var result = num1 % num2;
      alert("Modulus of " + num1 + " and " + num2 + " is " + result);
      console.log("Modulus of " + num1 + " and " + num2 + " is " + result);
@@ -179,9 +185,11 @@ var first, second, third;
      console.log("The remainder is : " + number);
 
 // 4. Cost of one movie ticket is 600 PKR. Write a script to store ticket price in a variable & calculate the cost of buying 5 tickets to a movie.
-var ticket_price = 600;
-var tickets = ticket_price * 5;
-console.log("Total cost to buy 5 tickets to a movie is " + tickets);
+var ticket_price = +prompt("Enter a price of movie ticket");
+var tickets = +prompt("How many tickets you want");
+var total_price = ticket_price * tickets;
+console.log("Total cost to buy " + tickets + " tickets to a movie is " + total_price);
+alert("Total cost to buy " + tickets + " tickets to a movie is " + total_price);
 
 // 5. Write a script to display multiplication table of any number in your browser.
 console.log("Table of 4");
@@ -199,93 +207,102 @@ console.log(table + "x" + 10 + "=" + (table*10));
 
 // 6. The Temperature Converter: It’s hot out! Let’s make a converter based on the steps here.
      // a. Store a Celsius temperature into a variable.
-     var cel_temp = 25;
+     var cel_temp = +prompt("Give temperature in celcius");
      // b. Convert it to Fahrenheit & output “NNoC is NNoF”.
      var fahrenheit_temp = (cel_temp * 9 / 5) + 32;
      console.log(cel_temp + "C is " + fahrenheit_temp + "F")
+     alert(cel_temp + "C is " + fahrenheit_temp + "F")
      // c. Now store a Fahrenheit temperature into a variable.
-     var fahrenheit_temp = 70;
+     var fahrenheit_temp = +prompt("Give temperature in Fahrenheit");
      // d. Convert it to Celsius & output “NNoF is NNoC”.
      var cel_temp = (fahrenheit_temp - 32) * 5 / 9;
      console.log(fahrenheit_temp + "F is " + cel_temp + "C");
+     alert(fahrenheit_temp + "F is " + cel_temp + "C");
 
 // 7. Write a program to implement checkout process of a shopping cart system for an e-commerce website. Store the following in variables
 
      // a. Price of item 1
-     var price1 = 650;
+     var price1 = +prompt("Enter the price of item 1");
      console.log("Price of item 1 is " + price1);
-     // b. Price of item 2
-     var price2 = 100;
-     console.log("Price of item 2 is " + price2);
      // c. Ordered quantity of item 1
-     var quantity1 = 3;
+     var quantity1 = +prompt("Enter the quantity of item 1");
      console.log("Ordered quantity of item 1 is " + quantity1);
+     // b. Price of item 2
+     var price2 = +prompt("Enter the price of item 2");
+     console.log("Price of item 2 is " + price2);
      // d. Ordered Quantity of item 2
-     var quantity2 = 7;
+     var quantity2 = +prompt("Enter the quantity of item 2");
      console.log("Ordered quantity of item 2 is " + quantity2);
      // e. Shipping charges
      var charges = 100;
      console.log("Shipping charges is " + charges);
      // Compute the total cost & show the receipt in your browser.
-     console.log("Total cost of your order is " + ((price1*quantity1)+(price2*quantity2)+charges));
+     console.log("Total cost of your order including charges is " + ((price1*quantity1)+(price2*quantity2)+charges));
+     alert("Total cost of your order including charges is " + ((price1*quantity1)+(price2*quantity2)+charges));
 
 // 8. Store total marks & marks obtained by a student in 2 variables. Compute the percentage & show the result in your browser
 var total_marks = 980;
-var marks_obtained = 804;
+var marks_obtained = +prompt("Enter your obtained marks from the total of 980");
 var percentage = marks_obtained/total_marks*100;
 console.log(percentage + "%");
+alert(percentage + "%");
 
 // 9. Assume we have 10 US dollars & 25 Saudi Riyals. Write a script to convert the total currency to Pakistani Rupees. Perform all calculations in a single expression. (Exchange rates : 1 US Dollar = 104.80 Pakistani Rupee and 1 Saudi Riyal = 28 Pakistani Rupee)
-var US_dollars = 10;
-var saudi_riyals = 25;
+var US_dollars = +prompt("Enter currency in US dollar");
+var saudi_riyals = +prompt("Enter currency in saudi riyal");
 var PKR = (US_dollars*104.80) + (saudi_riyals*28);
 console.log("Total Currency is PKR: " + PKR);
+alert("Total Currency is PKR: " + PKR);
 
 // 10. Write a program to initialize a variable with some number and do arithmetic in following sequence:
      // a. Add 5
      // b. Multiply by 10
      // c. Divide the result by 2
      // Perform all calculations in a single expression
-     var number = 12;
+     var number = +prompt("Enter a number");
      var result = (number + 5)*10/2;
      console.log(result);
 
 // 11. The Age Calculator: Forgot how old someone is? Calculate it!
      // a. Store the current year in a variable.
-     current_year = 2024;
+     current_year = +prompt("Enter a current year");
      // b. Store their birth year in a variable.
-     birth_year = 1992;
+     birth_year = +prompt("Enter your birth year");
      // c. Calculate their 2 possible ages based on the stored values.
      age = current_year - birthYear;
      // Output them to the screen like so: “They are either NN or NN years old”.
      console.log("Your age is " + age);
+     alert("Your age is " + age);
 
 // 12. The Geometrizer: Calculate properties of a circle.
 // a. Store a radius into a variable.
-     var radius = 20;
+     var radius = +prompt("Enter the radius of a circle");
 // b. Calculate the circumference based on the radius, and output “The circumference is NN”.
 // (Hint : Circumference of a circle = 2 π r , π = 3.142)
      var circumference = 2 * 3.142 * radius;
      console.log("The circumference is " + circumference);
+     alert("The circumference is " + circumference);
 // Calculate the area based on the radius, and output “The
 // area is NN”. (Hint : Area of a circle = π r2, π = 3.142)
      var area = 3.142 * radius *radius;
      console.log("The area is: " + area);
+     alert("The area is: " + area);
 
 // 13. The Lifetime Supply Calculator: Ever wonder how much a “lifetime supply” of your favorite snack is? Wonder no more.
      // a. Store your favorite snack into a variable
-     var fav_snack = "chocolate chip";
+     var fav_snack = prompt("Enter your favorite snack");
      console.log("Favorati snack: " + fav_snack);
      // b. Store your current age into a variable.
-     var current_age = 20;
+     var current_age = +prompt("Enter your age");
      console.log("current age: " + current_age);
      // c. Store a maximum age into a variable.
      max_age = "65";
-     console,log("Estimated Maximum age: " + max_age);
+     console.log("Estimated Maximum age: " + max_age);
      // d. Store an estimated amount per day (as a number).
-      var per_day = 3;
+      var per_day = +prompt("Enter amount per day wants to eat");
       console.log("Amount of snack per day: " + per_day);
      // e. Calculate how many would you eat total for the rest of your life.
-     var total = (max_age - current_age) * per_day;
+     var total = (max_age - current_age) * (per_day*365);
      // Output the result to the screen like so: “You will need NNNN to last you until the ripe old age of NN”.
      console.log("You will need " + total + " " + fav_snack + " to last you until the ripe old age of " + max_age);
+     alert("You will need " + total + " " + fav_snack + " to last you until the ripe old age of " + max_age);
